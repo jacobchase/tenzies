@@ -23,55 +23,53 @@ div#root {
 
 main {
   background-color: #F5F5F5;
-  height: 100%;
-  border-radius: 5px;
-  align-items: center;
-  justify-content: center;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .container{
 display: grid;
 grid-template-columns: repeat(5,1fr);
 gap: 20px;
-transform: translateY(60px);
 margin-left:20px;
 }
 .tenzies{
-  margin-bottom: 15px;
-  font-weight: 600;
-  background-color: #FFFFFF;
-  font-size: 1.6rem;
-  border:none;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   height: 50px;
   width: 50px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .Submit{
+  height: 50px;
+  white-space: nowrap;
+  width: auto;
+  padding: 6px 21px;
+  border: none;
+  border-radius: 6px;
   background-color: #5035FF;
-  width: 92.15999603271484px;
-  height: 35.84000015258789px;
-  border-radius: 3.81px;
-  color:white;
-  margin-left: 155px;
-  transform: translateY(80px);
-  border:none;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor:pointer;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
 }
+
 .title{
   align-items: center;
   justify-content: center;
-  margin-left: 130px;
-  transform: translateY(30px);
+  text-align: center;
+  display: flex;
+  margin-bottom: -15px;
 }
 .description{
   display: flex;
   text-align: center;
-  transform: translateY(30px);
 }

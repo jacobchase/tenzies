@@ -33,7 +33,7 @@ main {
 display: grid;
 grid-template-columns: repeat(5,1fr);
 gap: 20px;
-transform: translateY(160px);
+transform: translateY(60px);
 margin-left:20px;
 }
 .tenzies{
@@ -57,10 +57,21 @@ margin-left:20px;
   border-radius: 3.81px;
   color:white;
   margin-left: 155px;
-  transform: translateY(170px);
+  transform: translateY(80px);
   border:none;
   font-size: 1rem;
   font-weight: 600;
   cursor:pointer;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.title{
+  align-items: center;
+  justify-content: center;
+  margin-left: 130px;
+  transform: translateY(30px);
+}
+.description{
+  display: flex;
+  text-align: center;
+  transform: translateY(30px);
 }

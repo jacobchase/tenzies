@@ -17,13 +17,21 @@ export default function App() {
     }
 
     function rollDice() {
-        setDice(generateAllNewDice())
+        setDice(oldDice => oldDice.map(die => {return die.isHeld===true ? die : {...die,value:Math.ceil(Math.random() * 6)}}))
     }
 
-    const diceElements = dice.map(dieObj => <Die key={dieObj.id} number={dieObj.value} isHeld={dieObj.isHeld}/>)
+    function holdDice(id){
+      setDice(prevDice => (prevDice.map(
+        item => {return item.id === id ? {...item, isHeld: !item.isHeld}: item}
+      )))
+    }
+
+    const diceElements = dice.map(dieObj => <Die key={dieObj.id} number={dieObj.value} isHeld={dieObj.isHeld} roll={holdDice} id={dieObj.id}/>)
 
     return (
         <main>
+          <h1 className="title">Tenzies</h1>
+          <p className="description">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
             <div className="container">
                 {diceElements}
             </div>
